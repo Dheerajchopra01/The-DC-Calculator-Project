@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+/* css reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Variables */
+
+/* General Styles */
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #8aaae5;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+section {
+  width: 40vw;
+  height: 90vh;
+
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+}
+
+.project__title {
+  text-align: center;
+  margin-top: 3vh;
+  font-family: 'Pacifico', cursive;
+  font-size: 2.5rem;
+}
+
+.calculator {
+  margin: auto;
+  width: 25vw;
+
+  display: grid;
+  border: 1px solid black;
+  grid-template-columns: repeat(4, 4fr);
+  grid-template-rows: 2rem 4rem repeat(5, 4rem);
+}
+
+.calculator__display {
+  grid-column: 1/5;
+  color: blue;
+  background-color: rgba(232, 227, 232, 0.955);
+  text-align: end;
+  padding-right: 10px;
+  /* border: 1px solid; */
+}
+
+.calculator__display__result {
+  font-size: 3rem;
+}
+
+.calculator__button {
+  background-color: rgba(253, 245, 230, 0.423);
+  border: 0.5px solid #d0cece;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.calculator__operators {
+  background-color: rgba(190, 27, 27, 0.836);
+  color: aliceblue;
+}
+
+.calculator__button:nth-of-type(17) {
+  grid-column: 1/3;
+}
+
+@media screen and (max-width: 400px) {
+  section {
+    width: 80vw;
+    height: 90vh;
+  }
+  .calculator {
+    width: 60vw;
+    grid-template-rows: 2rem 4rem repeat(5, 3.5rem);
+  }
+
+  .project__title {
+    font-size: 2.5rem;
+    margin-top: 3vh;
+  }
+}
+
+@media screen and (min-width: 400px) {
+  section {
+    width: 80vw;
+    height: 90vh;
+  }
+  .calculator {
+    width: 60vw;
+    grid-template-rows: 2rem 4rem repeat(5, 4rem);
+  }
+
+  .project__title {
+    font-size: 3rem;
+    margin-top: 6vh;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  section {
+    width: 80vw;
+    height: 90vh;
+  }
+  .calculator {
+    width: 60vw;
+    grid-template-rows: 3rem 5rem repeat(5, 5rem);
+  }
+
+  .project__title {
+    font-size: 5.5rem;
+    margin-top: 6vh;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  section {
+    width: 65vw;
+    height: 90vh;
+  }
+  .calculator {
+    width: 40vw;
+    grid-template-rows: 2rem 4rem repeat(5, 3.5rem);
+  }
+
+  .project__title {
+    font-size: 3rem;
+    margin-top: 3vh;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  section {
+    width: 60vw;
+    height: 90vh;
+  }
+  .calculator {
+    width: 30vw;
+    grid-template-rows: 2rem 5rem repeat(5, 4rem);
+  }
+
+  .project__title {
+    font-size: 4rem;
+    margin-top: 3vh;
+  }
+}
